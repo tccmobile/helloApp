@@ -48,9 +48,29 @@
 
 - (IBAction)changeTrans:(id)sender {
 
+    [_helloLabel setAlpha:[_transSlider value]];
+
 }
 
 - (IBAction)changeColor:(id)sender {
+
+    switch([_colorSeg selectedSegmentIndex]){
+        case 0:
+            [_helloLabel setTextColor:[UIColor blackColor]];
+            break;
+        case 1:
+            [_helloLabel setTextColor:[UIColor redColor]];
+            break;
+        case 2:
+            [_helloLabel setTextColor:[UIColor greenColor]];
+            break;
+        case 3:
+            [_helloLabel setTextColor:[UIColor blueColor]];
+            break;
+        default:
+            [_helloLabel setTextColor:[UIColor blackColor]];
+            break;
+    }
 
 }
 
