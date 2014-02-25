@@ -42,7 +42,11 @@
 
 - (IBAction)changeText:(id)sender {
 
-   [_helloLabel setText:@"World, Hello"];
+    if ([(_helloLabel.text) isEqualToString:@"Hello, World"])
+
+        [_helloLabel setText:@"World, Hello"];
+    else
+        [_helloLabel setText:@"Hello, World"];
 
 }
 
